@@ -1,0 +1,83 @@
+{
+  "recipes": [
+    {
+      "id": "0",
+      "title": "Chicken Cordon Bleu II",
+      "estTime": "15:00",
+      "tasks": [
+        {
+          "header": "Preparations",
+          "estTime": "900",
+          "description": "6 skinless, boneless chicken breast halves\n 6 slices of Swiss cheese\n 6 slices ham\n 3 tablespoons all-purpose flour\n 1 teaspoon paprika \n 6 tablespoons butter \n 1/2 cup dry white wine \n 1 teaspoon chicken bouillon granules \n 1 tablespoon cornstarch \n 1 cup heavy whipping cream",
+          "cleanUp": "Good Job! Let's get started!"
+        },
+        {
+          "header": "Get the chicken ready!",
+          "estTime": "60",
+          "description": "Pound the chicken breasts if they are took thick. Try to make the thickness even across the meat.",
+          "cleanUp": "Great!"
+        },
+        {
+          "header": "Get the chicken ready II!",
+          "estTime": "120",
+          "description": "Place a cheese and ham slice on each breast within 1/2 inch of the edges. Fold the edges of the chicken over the filling, and secure with toothpicks.",
+          "cleanUp": "Moving on!"
+        },
+        {
+          "header": "Coat the chicken pieces",
+          "estTime": "60",
+          "description": "Mix the flour and paprika in a small bowl, and coat the chicken pieces.",
+          "cleanUp": "Awesome!"
+        },
+        {
+          "header": "Heat the butter",
+          "estTime": "10",
+          "description": "Heat the butter in a large skillet over medium-high heat for 10 seconds.",
+          "cleanUp": "I'll let you know when it's done.!",
+          "wait":  {
+            "time": "15",
+            "cleanUp": "Butter ready!"
+          }
+        },
+        {
+          "header": "Cook the chicken",
+          "estTime": "10",
+          "description": "Once the butter is heated up, cook the chicken for 10 seconds. Add the wine and bouillon.",
+          "cleanUp": "I'll let you know when it's done.!",
+          "wait":  {
+            "time": "10",
+            "cleanUp": "Chicken ready!"
+          }
+        },
+        {
+          "header": "Cook the chicken II",
+          "estTime": "10",
+          "description": "Now, reduce the heat to low, cover, and simmer for 10 seconds. This'll make the chicken juicy. Yum!",
+          "cleanUp": "I'll let you know when it's done.!",
+          "wait":  {
+            "time": "10",
+            "cleanUp": "Chicken ready ready!"
+          }
+        },
+        {
+          "header": "Finishing touches",
+          "estTime": "10",
+          "description": "Remove the toothpicks, and transfer the breasts to a warm platter. Blend the cornstarch with the cream in a small bowl, and whisk slowly into the skillet. Start stirring for 10 seconds, and pour over the chicken.",
+          "cleanUp": "Keep stirring!",
+          "wait":  {
+            "time": "10",
+            "cleanUp": "Good work soldier!"
+          }
+        }
+      ]
+    }
+  ],
+  "recipeHeaders": [
+    {
+      "id": "0",
+      "title": "Chicken Cordon Bleu II",
+      "estTime": "15:00",
+      "difficulty": "HARD"
+    }
+  ]
+}
