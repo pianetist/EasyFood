@@ -59,7 +59,15 @@ const requestHandler = (req, res) => {
     if (isNumber(id)) {
       id = parseInt(id);
       console.log(id);
-      res.end(JSON.stringify(recipeExample));
+      var recipeList = recipes.recipes;
+      var selectedRecipe;
+      for (var i = 0; i < recipeList.length; i++) {
+        if (recipeList[i]['id'] == id) {
+          selectedRecipe = recipeList[i];
+        }
+      }
+
+      res.end(JSON.stringify(selectedRecipe));
     } else {
       res.writeHead(404, {'Content-Type': 'text/plain'});
       res.end('No such recipe');

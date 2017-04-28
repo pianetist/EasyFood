@@ -8,7 +8,7 @@
         {
           "header": "Preparations",
           "estTime": "900",
-          "description": "6 skinless, boneless chicken breast halves\n 6 slices of Swiss cheese\n 6 slices ham\n 3 tablespoons all-purpose flour\n 1 teaspoon paprika \n 6 tablespoons butter \n 1/2 cup dry white wine \n 1 teaspoon chicken bouillon granules \n 1 tablespoon cornstarch \n 1 cup heavy whipping cream",
+          "description": " 6 skinless, boneless chicken breast halves\n 6 slices of Swiss cheese\n 6 slices ham\n 3 tablespoons all-purpose flour\n 1 teaspoon paprika \n 6 tablespoons butter \n 1/2 cup dry white wine \n 1 teaspoon chicken bouillon granules \n 1 tablespoon cornstarch \n 1 cup heavy whipping cream",
           "cleanUp": "Good Job! Let's get started!"
         },
         {
@@ -70,6 +70,71 @@
           }
         }
       ]
+    },
+    {
+      "id": "1",
+      "title": "Chicken Cordon Bleu II",
+      "estTime": "15:00",
+      "tasks": [
+        {
+          "header": "Preparations",
+          "estTime": "900",
+          "description": "Chicken, Soup 1, Soup 2, Soup 3, Apples, Bananas, Carrots",
+          "cleanUp": "Good Job! Let's get started!"
+        },
+        {
+          "header": "Get soup 1 roiling!",
+          "estTime": "10",
+          "description": "Start boiling soup 1 at high heat",
+          "cleanUp": "I'll let you know when soup 1's ready!",
+          "wait":  {
+            "time": "10",
+            "cleanUp": "Soup 1 ready!"
+          }
+        },
+        {
+          "header": "Get soup 2 roiling!",
+          "estTime": "20",
+          "description": "Start boiling soup 2 at high heat.",
+          "cleanUp": "I'll let you know when soup 2's ready!",
+          "wait":  {
+            "time": "20",
+            "cleanUp": "Soup 2 ready!"
+          }
+        },
+        {
+          "header": "Get soup 3 roiling!",
+          "estTime": "10",
+          "description": "Start boiling soup 3 at medium heat.",
+          "cleanUp": "I'll let you know when soup 3's ready!",
+          "wait":  {
+            "time": "30",
+            "cleanUp": "Soup 3 ready!"
+          }
+        },
+        {
+          "header": "Ready the carrots!",
+          "estTime": "10",
+          "description": "Slice the carrots into very thin pieces. The thinner the better!",
+          "cleanUp": "You're quick!"
+        },
+        {
+          "header": "Ready the chicken!",
+          "estTime": "20",
+          "description": "Heat the chicken up for 5 minutes. Don't worry I'll time it for you.",
+          "cleanUp": "I'll let you know when the chicken is ready!",
+          "wait":  {
+            "time": "35",
+            "cleanUp": "Chicken is ready!"
+          }
+        },
+        {
+          "header": "Ready the Fruits!",
+          "estTime": "10",
+          "description": "Wash the fruits and arrange them prettily!!",
+          "cleanUp": "Great!"
+        }
+      ]
     }
   ],
   "recipeHeaders": [
@@ -77,6 +142,30 @@
       "id": "0",
       "title": "Chicken Cordon Bleu II",
       "estTime": "15:00",
+      "difficulty": "HARD"
+    },
+    {
+      "id": "1",
+      "title": "Demo recipe",
+      "estTime": "2:00",
+      "difficulty": "EASY"
+    },
+    {
+      "id": "1",
+      "title": "Demo recipe II",
+      "estTime": "5:00",
+      "difficulty": "EASY"
+    },
+    {
+      "id": "1",
+      "title": "Demo recipe III",
+      "estTime": "3:00",
+      "difficulty": "HARD"
+    },
+    {
+      "id": "1",
+      "title": "Demo recipe IV",
+      "estTime": "10:00",
       "difficulty": "HARD"
     }
   ]

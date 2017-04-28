@@ -46,7 +46,7 @@ class TaskHeader extends Component {
     return (
       <View style={{height: 42, backgroundColor: 'skyblue'}}>
         <Text style={{textAlign: 'center', paddingTop: 12, fontWeight: 'bold'}}>
-          {this.props.taskData.header}
+          {this.props.taskData['header']}
         </Text>
       </View>
     );
@@ -60,9 +60,9 @@ class TaskBody extends Component {
 
   render () {
     return (
-      <View style={{backgroundColor: 'steelblue'}}>
+      <View style={{}}>
         <Text style={{textAlign: 'left', padding: 12}}>
-          {this.props.taskData.description}
+          {this.props.taskData['description']}
         </Text>
       </View>
     );
@@ -106,9 +106,9 @@ class Task extends Component {
     return (
       <View style={{height: this.props.taskHeight, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
         <View style={{width: 300, backgroundColor: 'powderblue', borderRadius: 10}}>
-          <TaskHeader taskData={taskExample} />
-          <TaskBody taskData={taskExample} />
-          <TaskBottom taskData={taskExample} onComplete={() => this.props.onComplete()}/>
+          <TaskHeader taskData={this.props.taskData} />
+          <TaskBody taskData={this.props.taskData} />
+          <TaskBottom taskData={this.props.taskData} onComplete={() => this.props.onComplete()}/>
         </View>
       </View>
     );
@@ -135,7 +135,7 @@ class TaskTimer extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      timeLeft: parseInt(this.props.taskData.wait.time)
+      timeLeft: parseInt(this.props.taskData['wait']['time'])
     };
   }
 
@@ -160,7 +160,7 @@ class TaskTimer extends Component {
     if (newTime == 0) {
       clearInterval (this.timerID);
       AlertIOS.alert (
-        this.props.taskData.wait.cleanUp,
+        this.props.taskData['wait']['cleanUp'],
         null,
         this.alertTimersContainer.bind(this)
       );
@@ -187,7 +187,7 @@ class TaskTimer extends Component {
     return (
       <View style={{height: 40, width: this.props.containerWidth, flexDirection: 'row', borderBottomWidth: 1, borderColor: '#C5C1AA'}}>
         <View style={{flex: 8}}>
-          <Text style={{padding: 10, paddingLeft: 20}}>{this.props.taskData.header}</Text>
+          <Text style={{padding: 10, paddingLeft: 20}}>{this.props.taskData['header']}</Text>
         </View>
         <View style={{flex: 2}}>
           <Text style={{padding: 10}}>{this.formatTime()}</Text>
@@ -275,7 +275,7 @@ class TasksContainer extends Component {
         console.log('success', req.responseText);
         var recipe = JSON.parse(req.responseText);
         this.setState({
-          tasks: recipe.tasks
+          tasks: recipe['tasks']
         });
       } else {
         AlertIOS.alert (
@@ -373,13 +373,13 @@ class RecipeHeader extends Component {
       <TouchableOpacity onPress={() => this.headerClicked()}>
       <View style={{height: 40, width: this.props.containerWidth, flexDirection: 'row', borderBottomWidth: 1, borderColor: '#C5C1AA'}}>
         <View style={{flex: 8}}>
-          <Text style={{padding: 10, paddingLeft: 20}}>{this.props.headerData.title}</Text>
+          <Text style={{padding: 10, paddingLeft: 20}}>{this.props.headerData['title']}</Text>
         </View>
         <View style={{flex: 2}}>
-          <Text style={{padding: 10}}>{this.props.headerData.difficulty}</Text>
+          <Text style={{padding: 10}}>{this.props.headerData['difficulty']}</Text>
         </View>
         <View style={{flex: 2}}>
-          <Text style={{padding: 10}}>{this.props.headerData.estTime}</Text>
+          <Text style={{padding: 10}}>{this.props.headerData['estTime']}</Text>
         </View>
       </View>
       </TouchableOpacity>
@@ -407,7 +407,7 @@ class RecipeHeadersContainer extends Component {
         console.log('success', req.responseText);
         var recipeHeaders = JSON.parse(req.responseText);
         this.setState({
-          recipeHeaders: recipeHeaders.recipes
+          recipeHeaders: recipeHeaders
         });
       } else {
         AlertIOS.alert (
@@ -440,7 +440,7 @@ class RecipeHeadersContainer extends Component {
         </View>
         {this.state.recipeHeaders.map(function (val, idx) {
           return (
-            <RecipeHeader containerWidth={this.props.containerWidth} headerData={val} key={idx} headerID={val.id} onHeaderClick={(headerID) => this.recipeClicked(headerID)}/>
+            <RecipeHeader containerWidth={this.props.containerWidth} headerData={val} key={idx} headerID={val['id']} onHeaderClick={(headerID) => this.recipeClicked(headerID)}/>
           );
         }, this)}
       </View>
