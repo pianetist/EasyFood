@@ -85,7 +85,7 @@
         {
           "header": "Get soup 1 roiling!",
           "estTime": "10",
-          "description": "Start boiling soup 1 at high heat",
+          "description": "Start boiling soup 1 at high heat for 10 seconds",
           "cleanUp": "I'll let you know when soup 1's ready!",
           "wait":  {
             "time": "10",
@@ -95,7 +95,7 @@
         {
           "header": "Get soup 2 roiling!",
           "estTime": "20",
-          "description": "Start boiling soup 2 at high heat.",
+          "description": "Start boiling soup 2 at high heat for 20 seconds.",
           "cleanUp": "I'll let you know when soup 2's ready!",
           "wait":  {
             "time": "20",
@@ -105,7 +105,7 @@
         {
           "header": "Get soup 3 roiling!",
           "estTime": "10",
-          "description": "Start boiling soup 3 at medium heat.",
+          "description": "Start boiling soup 3 at medium heat for 30 seconds.",
           "cleanUp": "I'll let you know when soup 3's ready!",
           "wait":  {
             "time": "30",
@@ -121,10 +121,10 @@
         {
           "header": "Ready the chicken!",
           "estTime": "20",
-          "description": "Heat the chicken up for 5 minutes. Don't worry I'll time it for you.",
+          "description": "Heat the chicken up for 20 seconds. Don't worry I'll time it for you.",
           "cleanUp": "I'll let you know when the chicken is ready!",
           "wait":  {
-            "time": "35",
+            "time": "20",
             "cleanUp": "Chicken is ready!"
           }
         },
